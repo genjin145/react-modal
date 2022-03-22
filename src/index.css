@@ -1,0 +1,74 @@
+body {
+  margin: 40px 30%;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  background-color: #2d2d2d;
+}
+
+button {
+  padding: 8px 16px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: teal;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 300ms;
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-enter-active {
+  opacity: 1;
+}
+
+.modal-exit {
+  opacity: 1;
+}
+
+.modal-exit-active {
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  background-color: black;
+  transition: transform 300ms;
+}
+
+.modal-enter .content {
+  transform: scale(0.5);
+}
+
+.modal-enter-active .content {
+  transform: scale(1);
+}
+
+.modal-exit .content {
+  transform: scale(1);
+}
+
+.modal-exit-active .content {
+  transform: scale(0.5);
+}
